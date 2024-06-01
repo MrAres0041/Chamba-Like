@@ -1,0 +1,4 @@
+res://scenes/player.tscn
+res://scenes/attack.tscn
+res://scripts/attack.gd
+res://scenes/test_map.tscn

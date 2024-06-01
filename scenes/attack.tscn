@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://cpflng2vfa0pm"]
+
+[ext_resource type="Script" path="res://scripts/attack.gd" id="1_bqct4"]
+[ext_resource type="Texture2D" uid="uid://du8jacqm2hndo" path="res://assets/slash.png" id="1_kpl0b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aq3cv"]
+atlas = ExtResource("1_kpl0b")
+region = Rect2(0, 0, 88, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4wbd"]
+atlas = ExtResource("1_kpl0b")
+region = Rect2(88, 0, 88, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vvfay"]
+atlas = ExtResource("1_kpl0b")
+region = Rect2(176, 0, 88, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kg1wc"]
+atlas = ExtResource("1_kpl0b")
+region = Rect2(264, 0, 88, 45)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w3x3d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aq3cv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k4wbd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vvfay")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kg1wc")
+}],
+"loop": true,
+"name": &"slash_1",
+"speed": 5.0
+}]
+
+[node name="attack" type="Node"]
+script = ExtResource("1_bqct4")
+
+[node name="atk_an" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_w3x3d")
+animation = &"slash_1"
